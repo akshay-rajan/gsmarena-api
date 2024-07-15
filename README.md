@@ -45,3 +45,18 @@ Fetches smartphone specifications from [gsmarena](https://www.gsmarena.com) webs
   - `device` (str): The device name.
 - Returns:
   - dict: A dictionary representing the device with keys `name`, `img`, `quick_spec`, `detail_spec`, `pricing`, and `popularity`.
+
+# DJANGO REST API
+
+- http://localhost:8000/api/brands/: Get the list of brands.
+  ```
+  http://127.0.0.1:8000/api/brands/
+  ```
+- http://localhost:8000/api/brands/<brand_id>/devices/: Get devices of a particular brand.
+  ```
+  http://127.0.0.1:8000/api/brands/samsung-phones-9/devices/
+  ```
+- http://localhost:8000/api/devices/<device_id>/: Get details of a particular device.
+  ```
+  http://127.0.0.1:8000/api/devices/samsung_galaxy_z_fold6-13147/
+  ```
