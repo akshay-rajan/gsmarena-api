@@ -1,9 +1,39 @@
 # GSMArena API
 
-Fetches smartphone specifications from [gsmarena](https://www.gsmarena.com) website and returns the result as JSON objects.
+Fetch smartphone specifications from [gsmarena.com](https://www.gsmarena.com) using `BeautifulSoup`.
 
+The project has two parts:
+#### 1. [scrape.py](./README.md#scrapepy): A python file containing functions for scraping the website.
+#### 2. [API](./README.md#django-rest-api): An API that fetch data from the website, built using the Django REST Framework.
+
+> This project was done as part of the final project for the Harvard's CS50 Web Programming with Python and JavaScript course, to learn about web scraping and APIs.
 
 ## Usage
+
+1. Clone the repository:
+
+  ```bash
+  git clone https://github.com/akshay-rajan/gsmarena-api.git
+  ```
+
+2. Install the requirements:
+
+  ```bash
+  pip install -r requirements.txt
+  ```
+
+3. Start the development server at http://127.0.0.1:8000/ :
+  ```bash
+  cd restapi
+  python3 manage.py runserver
+  ```
+4. Now you can access the API by sending HTTP requests [like this](README.md#django-rest-api).
+
+
+## [scrape.py](./scrape.py)
+
+This file contains all the functions used for scraping *gsmarena.com*.
+
 
 ### `getDataFromUrl(url)`
 - Description: Returns the source of a page.
@@ -46,7 +76,9 @@ Fetches smartphone specifications from [gsmarena](https://www.gsmarena.com) webs
 - Returns:
   - dict: A dictionary representing the device with keys `name`, `img`, `quick_spec`, `detail_spec`, `pricing`, and `popularity`.
 
-# DJANGO REST API
+## DJANGO REST API
+
+A REST API A REST API built using the Django REST Framework that fetches data from *gsmarena.com*.
 
 - http://localhost:8000/api/brands/: Get the list of brands.
   ```
