@@ -1,0 +1,14 @@
+# Web Scraping Library
+beautifulsoup4==4.10.0
+
+# High-level Web Framework
+Django==5.0.7
+
+# Toolkit for building APIs with Django
+djangorestframework==3.15.2
+
+# HTTP Client
+httpx==0.27.0
+
+# Python Virtual Environment
+virtualenv==20.26.3
